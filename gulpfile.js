@@ -16,6 +16,7 @@ gulp.task('test', function(){
         .pipe(mocha({reporter: 'spec'}))
         .on('error', function(err){
           beep(2);
+          gutil.log(err);
           this.emit('end');
         });
 });

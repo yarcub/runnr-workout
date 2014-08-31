@@ -1,15 +1,15 @@
 var reader = require('jsonfile');
 var expect = require('chai').expect;
-var Workout = require('../index');
+var Route = require('../index').Route;
 
 describe('Route', function(){
 
 	var geojson = reader.readFileSync('test/resource/dummy-course.geojson');
   var src = geojson.features[0].geometry.coordinates;
-	var route = Workout.routeFromGeoJSON(geojson);
+	var route = Route.fromGeoJSON(geojson);
 
-  var first = {lat: src[0][1], lng: src[0][0]};
-  var last = {lat: src[src.length - 1][1], lng: src[src.length - 1][0]}
+  var first = {lat: src[0][1], lng: src[0][0], distance: 0};
+  var last = {lat: src[src.length - 1][1], lng: src[src.length - 1][0], distance: 21009};
 
 
   describe('distance', function(){
@@ -40,7 +40,7 @@ describe('Route', function(){
     });
 
     it('should return the geo point xx for the point at 10km from the start', function(){
-      expect(route.geoAt(10000)).to.deep.equal({lat:39.350705, lng:-8.54197});
+      expect(route.geoAt(10000)).to.deep.equal({lat:39.350705, lng:-8.54197, distance:10008});
     });
   });
 });
