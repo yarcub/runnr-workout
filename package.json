@@ -1,0 +1,31 @@
+{
+  "name": "runnr-workout",
+  "version": "0.0.0",
+  "description": "Running workout model",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "running",
+    "workout"
+  ],
+  "author": "nuno.sp.rosa@gmail.com",
+  "license": "BSD",
+  "devDependencies": {
+    "browserify": "^5.11.0",
+    "chai": "^1.9.1",
+    "gulp": "^3.8.7",
+    "gulp-browserify": "^0.5.0",
+    "gulp-jshint": "^1.8.4",
+    "gulp-mocha": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-util": "^3.0.1",
+    "jsonfile": "^2.0.0",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "dependencies": {
+    "geo-tools": "^0.1.1",
+    "geolib": "^2.0.14"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "asi": false,
+  "expr": true,
+  "loopfunc": true,
+  "curly": false,
+  "evil": true,
+  "node": true,
+  "white": true,
+  "undef": true,
+  "indent": 2,
+  "globals": { 
+    "distance": true,
+    "toMeters": true
+  }
+}
