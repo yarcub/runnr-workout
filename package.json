@@ -1,7 +1,7 @@
 {
-  "name": "runnr-workout",
+  "name": "runnr-race",
   "version": "0.0.0",
-  "description": "Running workout model",
+  "description": "Running race model",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -18,7 +18,6 @@
     "chai": "^1.9.1",
     "gulp": "^3.8.7",
     "gulp-browserify": "^0.5.0",
-    "gulp-clean": "^0.3.1",
     "gulp-jshint": "^1.8.4",
     "gulp-mocha": "^1.0.0",
     "gulp-rename": "^1.2.0",
