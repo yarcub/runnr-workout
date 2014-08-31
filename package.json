@@ -13,6 +13,7 @@
   "author": "nuno.sp.rosa@gmail.com",
   "license": "BSD",
   "devDependencies": {
+    "beepbeep": "^1.2.0",
     "browserify": "^5.11.0",
     "chai": "^1.9.1",
     "gulp": "^3.8.7",
