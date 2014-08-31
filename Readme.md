@@ -1,1 +1,2 @@
-[![Build Status](https://travis-ci.org/yarcub/runnr-workout.svg?branch=master)](https://travis-ci.org/yarcub/runnr-workout) [![Coverage Status](https://img.shields.io/coveralls/yarcub/runnr-workout.svg)](https://coveralls.io/r/yarcub/runnr-workout)
+[![Build Status](https://travis-ci.org/yarcub/runnr-workout.svg?branch=master)](https://travis-ci.org/yarcub/runnr-workout) [![Coverage Status](https://img.shields.io/coveralls/yarcub/runnr-workout.svg)](https://coveralls.io/r/yarcub/runnr-workout) [![Dependencies Status](https://david-dm.org/yarcub/runnr-workout.png)](https://david-dm.org/yarcub/runnr-workout) [![Dev Dependencies Status](https://david-dm.org/yarcub/runnr-workout/dev-status.svg)](https://david-dm.org/yarcub/runnr-workout#info=devDependencies)
+
