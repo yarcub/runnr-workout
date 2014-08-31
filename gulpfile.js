@@ -1,11 +1,12 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var jshint = require('gulp-jshint');
-var mocha = require('gulp-mocha');
-var browserify = require('browserify');
-var rename = require("gulp-rename");
-var beep = require('beepbeep');
-var source = require('vinyl-source-stream');
+var gulp = require('gulp'),
+    gutil = require('gulp-util'),
+    jshint = require('gulp-jshint'),
+    mocha = require('gulp-mocha'),
+    browserify = require('browserify'),
+    beep = require('beepbeep'),
+    source = require('vinyl-source-stream'),
+    uglify = require('gulp-uglify'),
+    buffer = require('vinyl-buffer');
 
 gulp.task('default',['watch-test'], function() {
   // place code for your default task here
@@ -30,10 +31,11 @@ gulp.task('lint', function(){
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('browserify', function() {
+gulp.task('build', function() {
     return browserify('./index.js')
         .bundle()
-        .pipe(source('runnr-workout.js'))
-        // Start piping stream to tasks!
+        .pipe(source('runnr-workout.min.js'))
+        .pipe(buffer())
+        .pipe(uglify())
         .pipe(gulp.dest('./build/client/'));
 });
