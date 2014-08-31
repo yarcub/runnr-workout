@@ -2,15 +2,14 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     jshint = require('gulp-jshint'),
     mocha = require('gulp-mocha'),
-    browserify = require('browserify'),
-    beep = require('beepbeep'),
-    source = require('vinyl-source-stream'),
+    rimraf = require('gulp-rimraf'),
     uglify = require('gulp-uglify'),
-    buffer = require('vinyl-buffer');
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    beep = require('beepbeep');
 
-gulp.task('default',['watch-test'], function() {
-  // place code for your default task here
-});
+gulp.task('default',['watch-test']);
 
 gulp.task('test', function(){
   return gulp.src(['test/*.js'], {read: false})
@@ -38,4 +37,9 @@ gulp.task('build', function() {
         .pipe(buffer())
         .pipe(uglify())
         .pipe(gulp.dest('./build/client/'));
+});
+
+gulp.task('clean', function () {
+  return gulp.src('./build/**/*.*', { read: false })
+    .pipe(rimraf());
 });
