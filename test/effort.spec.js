@@ -72,4 +72,22 @@ describe('Effort', function(){
     });
   });
 
-});
+  describe('pace', function(){
+    it('should have average pace min/km', function(){
+      expect(pacemaker.pace('minkm')).to.equal(5);
+      expect(pacemakerB.pace('minkm')).to.equal(6);
+    });
+  });
+
+  describe('paceAt', function(){
+    it('should have instant pace min/km with 10 sec delta',function(){
+        expect(pacemaker.paceAt(ten_minutes)).to.equal(5.05);
+        expect(pacemakerB.paceAt(ten_minutes)).to.equal(5.95);
+    });
+
+    it('should have zero instance pace on start and after finish', function(){
+      expect(pacemaker.paceAt(0)).to.equal(0);
+      expect(pacemaker.paceAt(one_hour)).to.equal(0);
+    })
+  });
+})
