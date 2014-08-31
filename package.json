@@ -33,7 +33,6 @@
     "vinyl-source-stream": "^0.1.1"
   },
   "dependencies": {
-    "geo-tools": "^0.1.1",
     "geolib": "^2.0.14"
   }
 }
