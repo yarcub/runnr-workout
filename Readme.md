@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/yarcub/runnr-workout.svg?branch=master)](https://travis-ci.org/yarcub/runnr-workout)
