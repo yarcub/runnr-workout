@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var Effort = require('../index').Effort;
 
 describe('Effort', function(){
-  var params = {value: 5, units:'minkm', distance: 10000, sample_period: 1000};
+  var params = {value: 5, units:'minkm', distance: 10000, sample_period: 1};
 
 
   var pacemaker = new Effort.fromPace(params.value,
