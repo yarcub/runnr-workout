@@ -4,7 +4,7 @@
   "description": "Javascript models for running workouts (Route, Efforts and Races)",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "gulp test"
   },
   "keywords": [
     "running",
@@ -16,9 +16,6 @@
     "url": "git@github.com:yarcub/runnr-workout.git"
   },
   "main": "./index",
-  "scripts": {
-    "test": "npm test"
-  },
   "license": "BSD",
   "devDependencies": {
     "beepbeep": "^1.2.0",
