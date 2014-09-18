@@ -1,16 +1,24 @@
 {
-  "name": "runnr-race",
-  "version": "0.0.0",
-  "description": "Running race model",
+  "name": "runnr-workout",
+  "version": "0.0.1",
+  "description": "Javascript models for running workouts (Route, Efforts and Races)",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "npm test"
   },
   "keywords": [
     "running",
     "workout"
   ],
-  "author": "nuno.sp.rosa@gmail.com",
+  "author": "Nuno Rosa <nuno.sp.rosa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yarcub/runnr-workout.git"
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "npm test"
+  },
   "license": "BSD",
   "devDependencies": {
     "beepbeep": "^1.2.0",
