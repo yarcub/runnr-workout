@@ -49,10 +49,10 @@ describe('Race', function(){
     });
   });
 
-  describe('atDistance', function(){
+  describe('orderAtDistance', function(){
 
     it('should return pacemaker on second at 1km', function(){
-      var ordered = race.atDistance(1000);
+      var ordered = race.orderAtDistance(1000);
       var first = ordered[0];
       var second = ordered[1];
 
@@ -61,7 +61,7 @@ describe('Race', function(){
     });
 
     it('should return pacemaker on second at 10km', function(){
-      var ordered = race.atDistance(10000);
+      var ordered = race.orderAtDistance(10000);
       var first = ordered[0];
       var second = ordered[1];
 
@@ -70,10 +70,10 @@ describe('Race', function(){
     });
   });
 
-  describe('atTime', function(){
+  describe('orderAtTime', function(){
 
     it('should return pacemaker on first at 1min', function(){
-      var ordered = race.atTime(60);
+      var ordered = race.orderAtTime(60);
       var first = ordered[0];
       var second = ordered[1];;
 
@@ -82,7 +82,7 @@ describe('Race', function(){
     });
 
     it('should return pacemaker on second at 1h', function(){
-      var ordered = race.atTime(3600);
+      var ordered = race.orderAtTime(3600);
       var first = ordered[0];
       var second = ordered[1];;
 
