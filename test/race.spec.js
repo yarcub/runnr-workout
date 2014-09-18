@@ -7,7 +7,7 @@ var Effort = require('../index').Effort;
 
 describe('Race', function(){
 
-  var race, route;
+  var race, route, pacemaker, dummy;
 
   before(function(done){
     var geojson = reader.readFileSync('test/resource/dummy-course.geojson');
@@ -15,7 +15,7 @@ describe('Race', function(){
     route = Route.fromGeoJSON(geojson);
     race = new Race(route);
 
-    var pacemaker = Effort.fromPace(5, 'minkm', route.distance(), 1);
+    pacemaker = Effort.fromPace(5, 'minkm', route.distance(), 1);
     race.addEffort(pacemaker);
 
     gpxParse.parseGpxFromFile("test/resource/dummy-effort.gpx", function(error, data) {
@@ -25,7 +25,7 @@ describe('Race', function(){
         gpsData.push({timestamp: entry.time, lat: entry.lat, lng: entry.lon});
       });
 
-      var dummy = Effort.fromGPS(gpsData, "dummy");
+      dummy = Effort.fromGPS(gpsData, "dummy");
       race.addEffort(dummy);
       done();
     });
@@ -47,6 +47,49 @@ describe('Race', function(){
     it('should be the same as route', function(){
       expect(race.distance()).to.equal(route.distance());
     });
+  });
+
+  describe('atDistance', function(){
+
+    it('should return pacemaker on second at 1km', function(){
+      var ordered = race.atDistance(1000);
+      var first = ordered[0];
+      var second = ordered[1];
+
+      expect(first.name()).to.be.equal(dummy.name());
+      expect(second.name()).to.be.equal(pacemaker.name());
+    });
+
+    it('should return pacemaker on second at 10km', function(){
+      var ordered = race.atDistance(10000);
+      var first = ordered[0];
+      var second = ordered[1];
+
+      expect(first.name()).to.be.equal(dummy.name());
+      expect(second.name()).to.be.equal(pacemaker.name());
+    });
+  });
+
+  describe('atTime', function(){
+
+    it('should return pacemaker on first at 1min', function(){
+      var ordered = race.atTime(60);
+      var first = ordered[0];
+      var second = ordered[1];;
+
+      expect(first.name()).to.be.equal(pacemaker.name());
+      expect(second.name()).to.be.equal(dummy.name());
+    });
+
+    it('should return pacemaker on second at 1h', function(){
+      var ordered = race.atTime(3600);
+      var first = ordered[0];
+      var second = ordered[1];;
+
+      expect(first.name()).to.be.equal(dummy.name());
+      expect(second.name()).to.be.equal(pacemaker.name());
+    });
+
   });
 
 });
