@@ -1,6 +1,6 @@
 {
   "name": "runnr-workout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript models for running workouts (Route, Efforts and Races)",
   "main": "index.js",
   "scripts": {
