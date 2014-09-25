@@ -5,12 +5,12 @@ describe('Effort', function(){
   var params = {value: 5, units:'minkm', distance: 10000, sample_period: 1};
 
 
-  var pacemaker = new Effort.fromPace(params.value,
+  var pacemaker = Effort.fromPace(params.value,
                                       params.units,
                                       params.distance,
                                       params.sample_period);
 
-  var pacemakerB = new Effort.fromPace(6,
+  var pacemakerB = Effort.fromPace(6,
                                       params.units,
                                       params.distance,
                                       params.sample_period);
