@@ -2,7 +2,7 @@
   "name": "runnr-workout",
   "version": "0.0.2",
   "description": "Javascript models for running workouts (Route, Efforts and Races)",
-  "main": "index.js",
+  "main": "./index",
   "scripts": {
     "test": "gulp test"
   },
@@ -15,7 +15,6 @@
     "type": "git",
     "url": "git@github.com:yarcub/runnr-workout.git"
   },
-  "main": "./index",
   "license": "BSD",
   "devDependencies": {
     "beepbeep": "^1.2.0",
@@ -33,7 +32,7 @@
     "gulp-util": "^3.0.1",
     "istanbul": "^0.3.0",
     "jsonfile": "^2.0.0",
-    "mocha": "^1.21.4",
+    "mocha": "^2.5.1",
     "mocha-lcov-reporter": "0.0.1",
     "vinyl-buffer": "0.0.0",
     "vinyl-source-stream": "^0.1.1"
