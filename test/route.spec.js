@@ -9,15 +9,15 @@ describe('Route', function(){
 	var route = Route.fromGeoJSON(geojson);
 
   var first = {lat: src[0][1], lng: src[0][0], distance: 0};
-  var last = {lat: src[src.length - 1][1], lng: src[src.length - 1][0], distance: 21009};
+  var last = {lat: src[src.length - 1][1], lng: src[src.length - 1][0], distance: 21008};
 
 
   describe('distance', function(){
     it('should return the route distance in meters', function(){
-      expect(route.distance()).to.equal(21009);
-    });  
+      expect(route.distance()).to.equal(21008);
+    });
   });
-	
+
   describe('start', function(){
     it('should return the route first geo point', function(){
       expect(route.start()).to.deep.equal(first);
@@ -40,7 +40,7 @@ describe('Route', function(){
     });
 
     it('should return the geo point xx for the point at 10km from the start', function(){
-      expect(route.geoAt(10000)).to.deep.equal({lat:39.350705, lng:-8.54197, distance:10008});
+      expect(route.geoAt(10000)).to.deep.equal({lat:39.350705, lng:-8.54197, distance:10007});
     });
   });
 });
