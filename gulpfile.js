@@ -17,7 +17,7 @@ gulp.task('test', function(){
         .on('error', function(err){
           beep(2);
           gutil.log(err);
-          this.emit('end');
+          process.exit.bind(process, 1);
         });
 });
 
