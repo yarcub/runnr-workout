@@ -33,7 +33,7 @@
     "gulp-util": "^3.0.1",
     "istanbul": "^0.4.3",
     "jsonfile": "^2.0.0",
-    "mocha": "^2.5.3",
+    "mocha": "^3.0.0",
     "mocha-lcov-reporter": "0.0.1",
     "vinyl-buffer": "0.0.0",
     "vinyl-source-stream": "^0.1.1"
