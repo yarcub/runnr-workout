@@ -19,7 +19,7 @@
   "devDependencies": {
     "jshint": "2.x",
     "beepbeep": "^1.2.0",
-    "browserify": "^14.0.0",
+    "browserify": "^16.3.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.1",
     "gpx-parse": "^0.10.4",
