@@ -21,7 +21,7 @@
     "beepbeep": "^1.2.0",
     "browserify": "^14.0.0",
     "chai": "^3.5.0",
-    "coveralls": "^2.11.1",
+    "coveralls": "^3.0.6",
     "gpx-parse": "^0.10.4",
     "gulp": "^3.8.7",
     "gulp-browserify": "^0.5.0",
