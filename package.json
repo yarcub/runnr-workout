@@ -27,7 +27,7 @@
     "gulp-browserify": "^0.5.0",
     "gulp-jshint": "^2.0.1",
     "gulp-mocha": "^4.0.0",
-    "gulp-rename": "^1.2.0",
+    "gulp-rename": "^2.0.0",
     "gulp-rimraf": "^0.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.1",
