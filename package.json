@@ -17,7 +17,7 @@
   },
   "license": "BSD",
   "devDependencies": {
-    "jshint": "2.x",
+    "jshint": "^2.11.1",
     "beepbeep": "^1.2.0",
     "browserify": "^14.0.0",
     "chai": "^3.5.0",
